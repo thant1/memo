@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<audio src="Derek Milla.mp3"></audio>
+<button id="button">
+  <i class="fa fa-volume-up"></i>
+</button>
+
+<script>
+  const button = document.querySelector("#button");
+  const icon = document.querySelector("#button > i");
+  const audio = document.querySelector("audio");
+
+  button.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.volume = .3;
+      audio.play();
+      icon.classList.remove("fa-volume-up");
+      icon.classList.add("fa-volume-off");
+    } else {
+      audio.pause();
+      icon.classList.remove("fa-volume-off");
+      icon.classList.add("fa-volume-up");
+    }
+    button.classList.add("fade");
+  });  
+</script>
+
+<html> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+ 
+<style> 
+
+body {
+  background-image: url('Background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+audio {
+  display: none;
+}
+
+p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgba(238, 238, 238, 0.6);
+  font-size: 20px;
+}
+
+button {
+  font-size: 16px;
+  color: #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  padding: 15px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  z-index: 100;
+}
+
+button.fade:hover {
+  opacity: 0.8;
+}
+
+.fade {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
+
+
+* {box-sizing:border-box} 
+body {font-family: Verdana,sans-serif;margin:0} 
+.slidephoto {display:none} 
+ 
+/* Slideshow container */ 
+.slidepics { 
+  max-width: 1000px;
+  position: relative; 
+  margin: auto;
+} 
+ 
+/* Next & previous buttons */ 
+.prev, .next { 
+  cursor: pointer; 
+  position: absolute; 
+  top: 50%; 
+  width: auto; 
+  padding: 16px; 
+  margin-top: -22px; 
+  color: white; 
+  font-weight: bold; 
+  font-size: 18px; 
+  transition: 0.6s ease; 
+  border-radius: 0 3px 3px 0; 
+  background-color: rgba(0,0,0,0.2);
+} 
+ 
+/* Position the "next button" to the right */ 
+.next { 
+  right: 0; 
+  border-radius: 3px 0 0 3px; 
+} 
+ 
+/* On hover, add a black background color with a little bit see-through */ 
+.prev:hover, .next:hover { 
+  background-color: rgba(128, 204, 105, 0.8); 
+} 
+ 
+/* Caption text */ 
+.text { 
+  color: #f4eeee; 
+  font-size: 15px; 
+  padding: 8px 5px; 
+  position: absolute;
+  right: 15px;
+  top: 38.5%;
+  width: 40%; 
+  text-align: left; 
+  background-color: rgba(8, 8, 8, 0.2);
+} 
+ 
+/* Number text (1/3 etc) */ 
+.numbertext { 
+  color: #f2f2f2; 
+  font-size: 12px; 
+  padding: 8px 12px; 
+  position: absolute; 
+  top: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5); 
+} 
+ 
+/* The dots/bullets/indicators */ 
+.dot { 
+  cursor:pointer; 
+  height: 13px; 
+  width: 13px; 
+  margin: 0 2px; 
+  background-color: #bbb; 
+  border-radius: 50%; 
+  display: inline-block; 
+  transition: background-color 0.6s ease; 
+} 
+ 
+.active, .dot:hover { 
+  background-color: #717171; 
+} 
+ 
+/* Fading animation */ 
+.fade { 
+  -webkit-animation-name: fade; 
+  -webkit-animation-duration: 1.5s; 
+  animation-name: fade; 
+  animation-duration: 1.5s; 
+} 
+ 
+@-webkit-keyframes fade { 
+  from {opacity: .4} 
+  to {opacity: 1} 
+} 
+ 
+@keyframes fade { 
+  from {opacity: .4} 
+  to {opacity: 1} 
+} 
+ 
+/* On smaller screens, decrease text size */ 
+@media only screen and (max-width: 250px) { 
+  .prev, .next,.text {font-size: 11px} 
+} 
+</style> 
+<body> 
+
+<div class="slidpics"> 
+ 
+<div class="slidephoto fade"> 
+  <div class="numbertext">1 / 26</div> 
+  <img src="1.jpg" style="width:45%"> 
+  <div class="text">ဒါလေးတွေက ပထမဆုံးပေးဖူးတဲ့ အမှတ်တရလေးပါ<br> 
+  </div> 
+</div> 
+ 
+<div class="slidephoto fade"> 
+  <div class="numbertext">2 / 26</div> 
+  <img src="2.jpg" style="width:50%"> 
+  <div class="text">battery 3% နဲ့ရိုက်ခဲ့တဲ့နေရာလေး တောထဲမှာပေါ့နော်<br>
+  </div> 
+</div> 
+ 
+<div class="slidephoto fade"> 
+  <div class="numbertext">3 / 26</div> 
+  <img src="3.jpg" style="width:50%"> 
+  <div class="text">ချို ကြိုက်တဲ့ all star လေး<br>
+  </div> 
+</div> 
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">4 / 26</div> 
+  <img src="4.jpg" style="width:50%"> 
+  <div class="text">ဒီပုံလေးရိုက်တုန်းက မသိလိုက်ဖူး<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">5 / 26</div> 
+  <img src="5.jpg" style="width:50%"> 
+  <div class="text">အရမ်းလှလို့ အခုချိန်ထိ wallpaper ထားထားတယ်...<br>
+  </div> 
+</div> 
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">6 / 26</div> 
+  <img src="6.jpg" style="width:50%"> 
+  <div class="text">ဒီပုံလေးကို ချို ကြိုက်လို့ ထည့်ထားထားတာ<br>
+  </div> 
+</div> 
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">7 / 26</div> 
+  <img src="7.jpg" style="width:50%"> 
+  <div class="text">ဂျင်းအင်ကျီရယ်, အိတ်အနီလေးရယ်, ဆံပင်းလေးလည်းထုံးထားတယ်<br>
+  </div> 
+</div> 
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">8 / 26</div> 
+  <img src="8.jpg" style="width:50%"> 
+  <div class="text">ကိုက်လန်ပန်းပွင့်လေး...<br>
+  </div> 
+</div> 
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">9 / 26</div> 
+  <img src="9.jpg" style="width:50%"> 
+  <div class="text">ချို ကြိုက်တဲ့သီချင်းတွေယူလာတဲ့နေ့ကလေ <br>အဲ့ညနေတုန်းကလည်း အရမ်းပျော်ဖို့ကောင်းတာနော်<br>
+  </div> 
+</div> 
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">10 / 26</div> 
+  <img src="10.jpg" style="width:50%"> 
+  <div class="text">ဒီပုံလေးက မှတ်မှတ်ရရပါဘဲ ကျွန်တော့်ကိုစောင့်နေရလို့ ချို စိတ်ဆိုးတဲ့နေ့လေ hee"<br>
+  </div> 
+</div> 
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">11 / 26</div> 
+  <img src="11.jpg" style="width:50%"> 
+  <div class="text">ah!! all star လေးနဲ့ အပင်သေးသေးလေး....<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">12 / 26</div> 
+  <img src="12.jpg" style="width:50%"> 
+  <div class="text">ခရမ်းရောင်သွေးကြောလေးတွေ နောက်ခါမတွေ့ရမှာစိုးလို့ ရိုက်ထားတာ<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">13 / 26</div> 
+  <img src="13.jpg" style="width:50%"> 
+  <div class="text">အဲ့ညနေက အိမ်ပြန်ရင် မတွေ့ရတော့ဖူးဆိုပြီး ပြောလို့ ကောင်လေး ဝမ်းနည်း :(<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">14 / 26</div> 
+  <img src="14.jpg" style="width:30%"> 
+  <div class="text">ဘူးအဟောင်းမတွေ့လို့ အသစ်ဖောက်ပြီး ကောက်ပေးတာ 🤣<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">15 / 26</div> 
+  <img src="15.jpg" style="width:50%"> 
+  <div class="text">တစ်လပြည့်တဲ့နေ့နဲ့ ဖုန်းကြည့်တဲ့ အချိန် 00:00 တိုက်ဆိုင်သွားတာလေ ss ယူပြီးသိမ်းထားတာ<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">16 / 26</div> 
+  <img src="16.jpg" style="width:50%"> 
+  <div class="text">ဟဲဟဲ အဲ့ချိန်မှာဘဲ ရခဲ့တာနော်<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">17 / 26</div> 
+  <img src="17.jpg" style="width:50%"> 
+  <div class="text">ရွာထဲမှာ တစ်ညအိပ်ပြီး မနက်ပိုင်းလေ ဘာမှမဝယ်ဘဲ အဲ့နေရာကိုရောက်လာတာ 🤣<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">18 / 26</div> 
+  <img src="18.jpg" style="width:50%"> 
+  <div class="text">အကိုတဲ့ ကျွန်တော် ပန်းသီးကိုဒီတိုင်းခွဲပြမယ် ယုံလားတဲ့ ဒီကလည်း ယုံတယ်လေ 🤣<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">19 / 26</div> 
+  <img src="19.jpg" style="width:50%"> 
+  <div class="text">focus ချိန်တာမရလို့ တင်းနေတာလေ, ပြီးတော့အဲ့ဒါလေးကို ဆိုင်ကယ်အရှေ့မှာထိုးထားပြီး မောင်းတာ<br>
+  </div> 
+</div>
+
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">20 / 26</div> 
+  <img src="20.jpg" style="width:50%"> 
+  <div class="text">ah!! မုန့်ညှင်းထုတ်လေးနဲ့ 😽😽<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">21 / 26</div> 
+  <img src="21.jpg" style="width:50%"> 
+  <div class="text">နှစ်ယောက်လုံးအိပ်ပျော်နေတာ<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">22 / 26</div> 
+  <img src="22.jpg" style="width:50%"> 
+  <div class="text">ဆိုင်ထဲမှာ ကျန်ခဲ့တဲ့ ပန်းစည်းလေးနဲ့ hee hee<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">23 / 26</div> 
+  <img src="23.jpg" style="width:50%"> 
+  <div class="text">ချစ်သူလေးနဲ့ တူတူစားခဲ့တဲ့ မနက်စာ<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">24 / 26</div> 
+  <img src="24.jpg" style="width:50%"> 
+  <div class="text">ဒီပုံလေးကြည့်ပြီး ချို သဘောကျနေတာနော်<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">25 / 26</div> 
+  <img src="25.jpg" style="width:50%"> 
+  <div class="text">အရမ်းလှလို့...<br>
+  </div> 
+</div>
+
+<div class="slidephoto fade"> 
+  <div class="numbertext">26 / 26</div> 
+  <img src="26.jpg" style="width:50%"> 
+  <div class="text">အဲ့နေရာမှာ တူတူရှိချင်တယ်<br>
+  </div> 
+</div>
+ 
+<a class="prev" onclick="plusSlides(-1)"> < </a> 
+<a class="next" onclick="plusSlides(1)"> > </a>
+ 
+</div> 
+<br> 
+ 
+<div style="text-align:center"> 
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span> 
+  <span class="dot" onclick="currentSlide(11)"></span> 
+  <span class="dot" onclick="currentSlide(12)"></span>
+  <span class="dot" onclick="currentSlide(13)"></span>
+  <span class="dot" onclick="currentSlide(14)"></span>
+  <span class="dot" onclick="currentSlide(15)"></span>
+  <span class="dot" onclick="currentSlide(16)"></span>
+  <span class="dot" onclick="currentSlide(17)"></span>
+  <span class="dot" onclick="currentSlide(18)"></span>
+  <span class="dot" onclick="currentSlide(19)"></span>
+  <span class="dot" onclick="currentSlide(20)"></span>
+  <span class="dot" onclick="currentSlide(21)"></span>
+  <span class="dot" onclick="currentSlide(22)"></span>
+  <span class="dot" onclick="currentSlide(23)"></span>
+  <span class="dot" onclick="currentSlide(24)"></span>
+  <span class="dot" onclick="currentSlide(25)"></span>
+  <span class="dot" onclick="currentSlide(26)"></span>
+  <span class="dot" onclick="currentSlide(27)"></span>
+</div> 
+ 
+<script> 
+var slideIndex = 1; 
+showSlides(slideIndex); 
+ 
+function plusSlides(n) { 
+  showSlides(slideIndex += n); 
+} 
+ 
+function currentSlide(n) { 
+  showSlides(slideIndex = n); 
+} 
+ 
+function showSlides(n) { 
+  var i; 
+  var slides = document.getElementsByClassName("slidephoto"); 
+  var dots = document.getElementsByClassName("dot"); 
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length} 
+  for (i = 0; i < slides.length; i++) { 
+      slides[i].style.display = "none"; 
+  } 
+  for (i = 0; i < dots.length; i++) { 
+      dots[i].className = dots[i].className.replace(" active", ""); 
+  } 
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active"; 
+} 
+</script> 
+</body>  
+</html>
